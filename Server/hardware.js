@@ -1,7 +1,7 @@
 const pixel = require("node-pixel"); //libary im Terminal mit npm install
 const firmata = require('firmata'); //libary im Terminal mit npm install
 
-let board = new firmata.Board('COM5',function(){ //dev.statt COM5
+let board = new firmata.Board('tty.usbmodem14201',function(){ //dev.statt COM5
 
     strip = new pixel.Strip({
         strips: [ {pin: 6, length: 35}, ], //length entsprechend der Pins anpassen
