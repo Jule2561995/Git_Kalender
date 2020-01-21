@@ -1,27 +1,38 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Kalender</title>
+    <title>Kalenderprojekt</title>
+    <script type="text/javascript">
+      function add(){
+        let name = document.getElementById("Name").value;
+ 				let date = document.getElementById("Date").value;
+        document.getElementById("January").innerHTML += "<tr>" + "<td>" + name + "</td>" + "<td>" + date + "</td>"+ "</tr>";
+        document.getElementById("Name").value = "";
+        document.getElementById("Date").value = "";
+      } //Divs im externen Dokument speichern? Mit Json?
+    </script>
+
   </head>
   <body>
-    <template>
-    <div>
-      <b-table striped hover :items="items"></b-table>
-    </div>
-  </template>
-
-  <script>
-    export default {
-      data() {
-        return {
-          items: [
-            { first_name: 'Jule', last_name: 'Pahling', date_of_birthday: 25.06.1995,},
-          ]
-        }
-      }
-    }
-  </script>
-
+    <h2>Birthday calender</h2>
+    <button type="button" name="button"><b> < </b></button>
+    <span id=behindertundscheisse>
+      <div class="birthdaytable">
+        <h4>Monat</h4>
+        <div class="isJaAuchEgal">
+          <table id='January'>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </span>
+    <button type="button" name="button"><b> > </b></button>
+    <input type="text" id="Name" placeholder="Name" value="">
+    <input type="text" id="Date" placeholder="Date" value="">
+    <button type="button" name="button" onclick="add()"><b> Confirme </b></button>
   </body>
 </html>
