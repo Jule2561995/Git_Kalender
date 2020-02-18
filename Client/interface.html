@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Kalenderprojekt</title>
+
     <script type="text/javascript">
       function add(){
         let name = document.getElementById("Name").value;
@@ -16,10 +17,11 @@
   </head>
   <body>
     <h2>Birthday calender</h2>
-    <button type="button" name="button"><b> < </b></button>
+    <button type="button" name="button" variant="outline-primary"><b> < </b></button>
     <span id=behindertundscheisse>
       <div class="birthdaytable">
         <h4>Monat</h4>
+    <button type="button" name="button" variant="outline-primary"><b> > </b></button>
         <div class="isJaAuchEgal">
           <table id='January'>
             <tr>
@@ -30,9 +32,8 @@
         </div>
       </div>
     </span>
-    <button type="button" name="button"><b> > </b></button>
     <input type="text" id="Name" placeholder="Name" value="">
     <input type="text" id="Date" placeholder="Date" value="">
-    <button type="button" name="button" onclick="add()"><b> Confirme </b></button>
+    <button type="button" name="button" onclick="add()" variant="success"><b> Confirme </b></button>
   </body>
 </html>
