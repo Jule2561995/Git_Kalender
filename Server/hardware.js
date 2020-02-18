@@ -130,6 +130,8 @@ let board = new firmata.Board('/dev/tty.usbmodem14201',function(){ //USB-Port li
 
 module.exports.allesAbrufen = allesAbrufen; //bezieht sich auf const hardware = require in der server.js
 
+//Erklärung
+
 // Alle LED's sollen grundsätzlich in weiß #423 abgebildet sein. Dabei wird die erste LED an der Position gestartet
 // in der auch der 1. Tag in der Woche starten würde d.h. 1. Januar war Wochentag Mittwoch, also wird auch die 3. LED im
 // obersten Strip gestartet
